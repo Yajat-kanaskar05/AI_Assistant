@@ -1,28 +1,11 @@
-# Python
+# Python cache files
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
 
 # Virtual Environment
 venv/
+env/
 ENV/
 .venv/
 
@@ -31,8 +14,25 @@ ENV/
 .idea/
 *.swp
 *.swo
+
+# System files
 .DS_Store
 Thumbs.db
 
-# Project specific
-tempCodeRunnerFile.py 
+# Temporary files
+tempCodeRunnerFile.py
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# System files
+*.so
+.Python
+parts/
+sdist/
+var/
+wheels/
+.installed.cfg
+*.egg 
