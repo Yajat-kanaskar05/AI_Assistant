@@ -6,6 +6,7 @@ A voice-controlled AI assistant that can perform various tasks through voice com
 
 - Voice activation using the wake word "Jarvis"
 - Opens websites (YouTube, Google, Stack Overflow)
+- Play music from YouTube using voice commands
 - Voice feedback for commands
 - Continuous listening mode
 
@@ -36,4 +37,8 @@ python main.py
 3. After activation, give commands like:
    - "Open YouTube"
    - "Open Google"
-   - "Open Stack Overflow" 
+   - "Open Stack Overflow"
+   - "Play [song name]" 
+
+## Music Playback
+The assistant can play music from YouTube. Simply say "Play" followed by the song name. Available songs can be configured by the person preference in musiclib.py file.
