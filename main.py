@@ -1,6 +1,7 @@
 import speech_recognition as sr
 import webbrowser
 import pyttsx3
+import musiclib
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
@@ -22,6 +23,12 @@ def process_command(c):
     elif "open stack overflow" in c.lower():
         speak("Opening Stack Overflow")
         webbrowser.open("https://www.stackoverflow.com")
+
+    elif c.lower().startswith("play"):
+        # Split the command and remove 'play', then join remaining words
+        song = " ".join(c.lower().split(" ")[1:])
+        link = musiclib.music[song]
+        webbrowser.open(link)
 
 
 if __name__ == "__main__": 
