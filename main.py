@@ -2,6 +2,7 @@ import speech_recognition as sr
 import webbrowser
 import pyttsx3
 import musiclib
+import pyjokes
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
@@ -29,6 +30,11 @@ def process_command(c):
         song = " ".join(c.lower().split(" ")[1:])
         link = musiclib.music[song]
         webbrowser.open(link)
+    
+    elif "tell a joke" in c.lower():
+        joke = pyjokes.get_joke()
+        print(joke)
+        speak(joke)
 
 
 if __name__ == "__main__": 
