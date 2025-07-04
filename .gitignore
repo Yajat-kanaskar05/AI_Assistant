@@ -36,3 +36,5 @@ var/
 wheels/
 .installed.cfg
 *.egg 
+
+creds.py

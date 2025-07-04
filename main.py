@@ -3,6 +3,8 @@ import webbrowser
 import pyttsx3
 import musiclib
 import pyjokes
+from openai import OpenAI
+import creds
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
@@ -10,6 +12,17 @@ engine = pyttsx3.init()
 def speak(text):
     engine.say(text)
     engine.runAndWait()
+
+def AIProcess(command):
+    client = creds.key
+    completion = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "You are a Virtual assistant named Jarvis , skilled in task like alexa and google cloud."},
+            {"role": "user","content": command}
+        ]
+    )
+    return completion.choices[0].message.content
 
 def process_command(c):
 
@@ -36,6 +49,9 @@ def process_command(c):
         print(joke)
         speak(joke)
 
+    else:
+        output = AIProcess(c)
+        speak(output)
 
 if __name__ == "__main__": 
     speak("Initializing Jarvis")
