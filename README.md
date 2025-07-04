@@ -10,6 +10,9 @@ A voice-controlled AI assistant that can perform various tasks through voice com
 - Voice feedback for commands
 - Continuous listening mode
 
+## OpenAI API Key (for AI Assistant Feature)
+-To enable the AI assistant features powered by OpenAI
+
 ## Requirements
 
 - Python 3.x
@@ -42,3 +45,6 @@ python main.py
 
 ## Music Playback
 The assistant can play music from YouTube. Simply say "Play" followed by the song name. Available songs can be configured by the person preference in musiclib.py file.
+
+
+
